@@ -18,6 +18,7 @@ public class BubbleMonitor : MonoBehaviour
         {
             Debug.Log("Bubble went outside bounds!");
             Destroy(transform.gameObject);
+            GameManager.Instance.GameOver();
         }
     }
 }
