@@ -9,7 +9,7 @@ public class PlayerMovement : MonoBehaviour
     public KeyCode inputKey;
 
     public float speed = 2f;
-    private float angle = 1f;
+    public float angle = 1f;
     private float radius;
 
     private float dir = 1;
@@ -23,13 +23,16 @@ public class PlayerMovement : MonoBehaviour
 
     //Bubble force
     private float bubblePushForce;
+    private float maxBubbleVelocity;
+
+    // Wind Object
+    /*    public GameObject windObject;*/
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         /*StartCoroutine(RaycastCycle());*/
-        bubblePushForce = GameManager.Instance.bubblePushForce;
-    
+        
     }
 
     void changeDir()
@@ -40,12 +43,17 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        /*  windObject.transform.right = target.position - windObject.transform.position;  */
+        transform.right = (target.position - transform.position).normalized ;
+
         radius = target.GetComponent<CircleCenterTarget>().circleRadius;
 
         float x = target.position.x + Mathf.Cos(angle) * radius;
         float y = target.position.y + Mathf.Sin(angle) * radius;
 
         transform.position = new Vector2(x, y);
+
 
         if (dir == 1)
         {
@@ -82,6 +90,8 @@ public class PlayerMovement : MonoBehaviour
     }*/
     void checkBubble()
     {
+        bubblePushForce = GameManager.Instance.bubblePushForce;
+        maxBubbleVelocity = GameManager.Instance.maxBubbleVelocity;
 
         Vector2 targetDir = (target.position - transform.position).normalized;
 
@@ -102,11 +112,9 @@ public class PlayerMovement : MonoBehaviour
 
                 // Apply force to the bubble
                 rb.AddForce(targetDir * bubblePushForce, ForceMode2D.Force);
-
-                float maxVelocity = 3f; // Set the maximum velocity you want
-                if (rb.linearVelocity.magnitude > maxVelocity)
+                if (rb.linearVelocity.magnitude > maxBubbleVelocity)
                 {
-                    rb.linearVelocity = rb.linearVelocity.normalized * maxVelocity;
+                    rb.linearVelocity = rb.linearVelocity.normalized * maxBubbleVelocity;
                 }
             }
         }

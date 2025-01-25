@@ -42,4 +42,15 @@ public class CircleCenterTarget : MonoBehaviour
         }
 
     }
+
+    public bool IsObjectInsideCircle(Vector3 objectPosition)
+    {
+
+        Vector3 circleCenter = transform.position;
+        // Calculate the distance between the object's position and the circle's center
+        float distance = Vector3.Distance(objectPosition, circleCenter);
+
+        // If the distance is less than or equal to the radius, the object is inside
+        return distance <= circleRadius;
+    }
 }

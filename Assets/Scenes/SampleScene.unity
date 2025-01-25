@@ -131,6 +131,7 @@ GameObject:
   - component: {fileID: 122810027}
   - component: {fileID: 122810029}
   - component: {fileID: 122810030}
+  - component: {fileID: 122810031}
   m_Layer: 0
   m_Name: Bubble
   m_TagString: Bubble
@@ -256,7 +257,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 0.5
+  m_Mass: 0.3
   m_LinearDamping: 0.6
   m_AngularDamping: 0.05
   m_GravityScale: 0
@@ -269,8 +270,20 @@ Rigidbody2D:
     m_Bits: 0
   m_Interpolate: 1
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 0
+--- !u!114 &122810031
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 122810026}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: acbc1f4cd2906594b8ecff8757b369be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &294526251
 GameObject:
   m_ObjectHideFlags: 0
@@ -316,7 +329,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e4b39538a4d95844b94e98e854a5c90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  circleRadius: 5
+  circleRadius: 5.5
   circleRenderer: {fileID: 294526254}
 --- !u!120 &294526254
 LineRenderer:
@@ -681,6 +694,7 @@ MonoBehaviour:
   target: {fileID: 294526252}
   inputKey: 306
   speed: 2
+  angle: 45
   circleRadius: 0.5
 --- !u!212 &1447399092
 SpriteRenderer:
@@ -880,7 +894,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: -2413806693520163455, guid: ebe73ca9363db456bacf42c025bb4847, type: 3}
-  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_Color: {r: 0, g: 1, b: 0.08865881, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -920,6 +934,7 @@ MonoBehaviour:
   target: {fileID: 294526252}
   inputKey: 305
   speed: 2
+  angle: 180
   circleRadius: 0.5
 --- !u!50 &1864001984
 Rigidbody2D:
@@ -995,6 +1010,7 @@ GameObject:
   - component: {fileID: 1880065304}
   - component: {fileID: 1880065305}
   - component: {fileID: 1880065306}
+  - component: {fileID: 1880065307}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -1030,7 +1046,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   circleRenderer: {fileID: 1880065306}
-  bubblePushForce: 0.1
+  bubblePushForce: 0.7
+  maxBubbleVelocity: 3
+  target: {fileID: 294526251}
 --- !u!120 &1880065306
 LineRenderer:
   serializedVersion: 2
@@ -1138,6 +1156,23 @@ LineRenderer:
   m_UseWorldSpace: 1
   m_Loop: 0
   m_ApplyActiveColorSpace: 1
+--- !u!320 &1880065307
+PlayableDirector:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1880065303}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_PlayableAsset: {fileID: 11400000, guid: ff96dd4b6d3186e46bd9878c22a0e9b8, type: 2}
+  m_InitialState: 1
+  m_WrapMode: 2
+  m_DirectorUpdateMode: 1
+  m_InitialTime: 0
+  m_SceneBindings: []
+  m_ExposedReferences:
+    m_References: []
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
