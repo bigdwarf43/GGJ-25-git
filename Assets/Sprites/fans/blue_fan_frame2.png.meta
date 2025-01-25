@@ -1,31 +1,37 @@
 fileFormatVersion: 2
-guid: c85583b30b9a6fb4fb44f469a5407750
+guid: 072370080a7f41d4eade88610e4bb8a6
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4965962611400931100
-    second: red_fan_0
+      213: 2037314891630918513
+    second: blue_fan_frame2_0
   - first:
-      213: -2713538737274660434
-    second: red_fan_1
+      213: 9168186848166162321
+    second: blue_fan_frame2_1
   - first:
-      213: 6245419429646653276
-    second: red_fan_2
+      213: -8337641840427529480
+    second: blue_fan_frame2_2
   - first:
-      213: -3323134506583242340
-    second: red_fan_3
+      213: -7481096330975193154
+    second: blue_fan_frame2_3
   - first:
-      213: -5636854817054617078
-    second: red_fan_4
+      213: 6654395622303705974
+    second: blue_fan_frame2_4
   - first:
-      213: -9140501199849333282
-    second: red_fan_5
+      213: 8910932812400168661
+    second: blue_fan_frame2_5
   - first:
-      213: 2999556313736049619
-    second: red_fan_6
+      213: -2285831082897307762
+    second: blue_fan_frame2_6
   - first:
-      213: 7163213225656972404
-    second: red_fan_7
+      213: -7301820731363615547
+    second: blue_fan_frame2_7
+  - first:
+      213: 3523305598224804110
+    second: blue_fan_frame2_8
+  - first:
+      213: 2364850896986843053
+    second: blue_fan_frame2_9
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -58,7 +64,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -130,65 +136,39 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: red_fan_0
+      name: blue_fan_frame2_0
       rect:
         serializedVersion: 2
         x: 66
-        y: 15
+        y: 51
         width: 380
-        height: 1308
+        height: 1293
       alignment: 9
-      pivot: {x: 0.49374366, y: 0.8689735}
+      pivot: {x: 0.5, y: 0.85}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c177c6c2fa4aae440800000000000000
-      internalID: 4965962611400931100
+      spriteID: 17b364b891ff54c10800000000000000
+      internalID: 2037314891630918513
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: red_fan_1
+      name: blue_fan_frame2_1
       rect:
         serializedVersion: 2
-        x: 373
-        y: 862
-        width: 22
-        height: 85
+        x: 247
+        y: 874
+        width: 19
+        height: 8
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -197,20 +177,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ea95b7835e2975ad0800000000000000
-      internalID: -2713538737274660434
+      spriteID: 19f2a5ffc51fb3f70800000000000000
+      internalID: 9168186848166162321
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: red_fan_2
+      name: blue_fan_frame2_2
       rect:
         serializedVersion: 2
-        x: 146
-        y: 747
-        width: 25
-        height: 93
+        x: 161
+        y: 635
+        width: 42
+        height: 145
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -219,85 +199,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c575961b1ef2ca650800000000000000
-      internalID: 6245419429646653276
+      spriteID: 8fa02ecbbeeba4c80800000000000000
+      internalID: -8337641840427529480
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: red_fan_3
+      name: blue_fan_frame2_3
       rect:
         serializedVersion: 2
-        x: 317
-        y: 659
-        width: 24
-        height: 103
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: c994342e5cad1e1d0800000000000000
-      internalID: -3323134506583242340
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: red_fan_4
-      rect:
-        serializedVersion: 2
-        x: 168
-        y: 470
-        width: 25
-        height: 101
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: a029203c86ed5c1b0800000000000000
-      internalID: -5636854817054617078
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: red_fan_5
-      rect:
-        serializedVersion: 2
-        x: 338
-        y: 342
-        width: 27
-        height: 118
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: eddd2f1569a662180800000000000000
-      internalID: -9140501199849333282
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: red_fan_6
-      rect:
-        serializedVersion: 2
-        x: 115
-        y: 218
-        width: 29
+        x: 332
+        y: 757
+        width: 30
         height: 102
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -307,20 +221,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3d37404339090a920800000000000000
-      internalID: 2999556313736049619
+      spriteID: eb7deb5068ecd2890800000000000000
+      internalID: -7481096330975193154
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: red_fan_7
+      name: blue_fan_frame2_4
       rect:
         serializedVersion: 2
-        x: 250
-        y: 57
-        width: 24
-        height: 86
+        x: 151
+        y: 447
+        width: 31
+        height: 107
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -329,8 +243,118 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 474f9a5f978d86360800000000000000
-      internalID: 7163213225656972404
+      spriteID: 67ba35edf89295c50800000000000000
+      internalID: 6654395622303705974
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blue_fan_frame2_5
+      rect:
+        serializedVersion: 2
+        x: 293
+        y: 550
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5de0c744e2ef9ab70800000000000000
+      internalID: 8910932812400168661
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blue_fan_frame2_6
+      rect:
+        serializedVersion: 2
+        x: 297
+        y: 552
+        width: 29
+        height: 115
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e870c5fadb81740e0800000000000000
+      internalID: -2285831082897307762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blue_fan_frame2_7
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 203
+        width: 38
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5cc1d754bb8baaa90800000000000000
+      internalID: -7301820731363615547
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blue_fan_frame2_8
+      rect:
+        serializedVersion: 2
+        x: 283
+        y: 328
+        width: 35
+        height: 116
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e09a55936cb45e030800000000000000
+      internalID: 3523305598224804110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blue_fan_frame2_9
+      rect:
+        serializedVersion: 2
+        x: 298
+        y: 90
+        width: 39
+        height: 124
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: da72aad7c53a1d020800000000000000
+      internalID: 2364850896986843053
       vertices: []
       indices: 
       edges: []
@@ -339,7 +363,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: d19c52f67bbae244bad8f7f48a72642b
+    spriteID: 6a2033b9bea0f3a4283d2ab1fb1835c0
     internalID: 0
     vertices: []
     indices: 
@@ -349,14 +373,16 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      red_fan_0: 4965962611400931100
-      red_fan_1: -2713538737274660434
-      red_fan_2: 6245419429646653276
-      red_fan_3: -3323134506583242340
-      red_fan_4: -5636854817054617078
-      red_fan_5: -9140501199849333282
-      red_fan_6: 2999556313736049619
-      red_fan_7: 7163213225656972404
+      blue_fan_frame2_0: 2037314891630918513
+      blue_fan_frame2_1: 9168186848166162321
+      blue_fan_frame2_2: -8337641840427529480
+      blue_fan_frame2_3: -7481096330975193154
+      blue_fan_frame2_4: 6654395622303705974
+      blue_fan_frame2_5: 8910932812400168661
+      blue_fan_frame2_6: -2285831082897307762
+      blue_fan_frame2_7: -7301820731363615547
+      blue_fan_frame2_8: 3523305598224804110
+      blue_fan_frame2_9: 2364850896986843053
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
