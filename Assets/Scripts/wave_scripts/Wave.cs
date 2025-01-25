@@ -13,6 +13,9 @@ public class EnemyData
 
     [field: SerializeField]
     public Vector2 spawnPoint{ get; private set; }
+
+    [field: SerializeField]
+    public Vector2 direction { get; private set; }
 }
 
 [CreateAssetMenu(fileName = "Wave", menuName = "ScriptableObjects/Waves", order = 1)]

@@ -44,18 +44,21 @@ public class WaveSpawner : MonoBehaviour
 
             var enemy= Instantiate(enemyDetails.EnemyPrefab, enemyDetails.spawnPoint, enemyDetails.EnemyPrefab.transform.rotation);
 
-            Vector2 targetDirection = ((Vector2)GameManager.Instance.target.transform.position - enemyDetails.spawnPoint).normalized;
-
-            Vector2 direction = new Vector2(
-                Mathf.Round(targetDirection.x),
-                Mathf.Round(targetDirection.y)
-            );
 
             // Set the enemy direction and the speed
-            enemy.transform.GetComponent<Bullet>().dir = direction;
+            enemy.transform.GetComponent<Bullet>().dir = enemyDetails.direction;
             enemy.transform.GetComponent<Bullet>().speed = enemyDetails.speed;
 
         }
+    }
+
+    private Vector2 SnapDirection(Vector2 direction)
+    {
+        // Snap the direction to (1, 0), (0, 1), (-1, 0), or (0, -1)
+        float x = Mathf.Abs(direction.x) > 0.5f ? Mathf.Sign(direction.x) : 0f;
+        float y = Mathf.Abs(direction.y) > 0.5f ? Mathf.Sign(direction.y) : 0f;
+
+        return new Vector2(x, y);
     }
 
     private void IncWave()
