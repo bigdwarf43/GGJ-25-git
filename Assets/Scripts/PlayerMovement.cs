@@ -45,9 +45,14 @@ public class PlayerMovement : MonoBehaviour
     {
 
         /*  windObject.transform.right = target.position - windObject.transform.position;  */
-        transform.right = (target.position - transform.position).normalized ;
+        /* transform.right = (target.position - transform.position).normalized ;*/
+
+        // Rotate the sprite based on the angle
+        transform.rotation = Quaternion.Euler(0, 0, (angle * Mathf.Rad2Deg) + 270 );  // Convert angle to 
 
         radius = target.GetComponent<CircleCenterTarget>().circleRadius;
+
+
 
         float x = target.position.x + Mathf.Cos(angle) * radius;
         float y = target.position.y + Mathf.Sin(angle) * radius;
