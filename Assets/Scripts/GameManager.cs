@@ -24,6 +24,11 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    public void BubbleHit()
+    {
+        Debug.Log("Bubble Damaged");
+    }
+
     // Update is called once per frame
     void Update()
     {
