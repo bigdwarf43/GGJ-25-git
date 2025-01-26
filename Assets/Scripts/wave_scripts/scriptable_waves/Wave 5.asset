@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <TimeBeforeThisWave>k__BackingField: 4
   <EnemiesInWave>k__BackingField:
-  - <EnemyPrefab>k__BackingField: {fileID: 0}
+  - <EnemyPrefab>k__BackingField: {fileID: 3594709517630284362, guid: 208abaf1581a01e46813313098f4484a, type: 3}
     <speed>k__BackingField: 4
-    <spawnPoint>k__BackingField: {x: 0, y: 0}
-    <direction>k__BackingField: {x: 0, y: 0}
+    <spawnPoint>k__BackingField: {x: -20, y: -5}
+    <direction>k__BackingField: {x: 1, y: 0.2}

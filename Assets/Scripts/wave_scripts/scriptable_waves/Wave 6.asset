@@ -12,5 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8769ba372e1b3484ab375c68be1001b7, type: 3}
   m_Name: Wave 6
   m_EditorClassIdentifier: 
-  <TimeBeforeThisWave>k__BackingField: 0
-  <EnemiesInWave>k__BackingField: []
+  <TimeBeforeThisWave>k__BackingField: 6
+  <EnemiesInWave>k__BackingField:
+  - <EnemyPrefab>k__BackingField: {fileID: 3594709517630284362, guid: 208abaf1581a01e46813313098f4484a, type: 3}
+    <speed>k__BackingField: 5
+    <spawnPoint>k__BackingField: {x: -5, y: -11}
+    <direction>k__BackingField: {x: 1, y: 1}
