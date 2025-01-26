@@ -95,7 +95,7 @@ public class PlayerMovement : MonoBehaviour
         {
             if (hit.collider.transform.CompareTag("Bubble"))
             {
-                Debug.Log("Bubble hit");
+
                 Rigidbody2D rb = hit.transform.GetComponent<Rigidbody2D>();
 
                 // Apply force to the bubble

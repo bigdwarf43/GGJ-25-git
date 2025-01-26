@@ -32,6 +32,7 @@ public class WaveSpawner : MonoBehaviour
             if (Time.time >= timeBtwnSpawns)
             {
                 SpawnWave();
+                Debug.Log($"spawned wave: {i}");
                 IncWave();
 
                 timeBtwnSpawns = Time.time + currentWave.TimeBeforeThisWave;
@@ -57,14 +58,6 @@ public class WaveSpawner : MonoBehaviour
         }
     }
 
-    private Vector2 SnapDirection(Vector2 direction)
-    {
-        // Snap the direction to (1, 0), (0, 1), (-1, 0), or (0, -1)
-        float x = Mathf.Abs(direction.x) > 0.5f ? Mathf.Sign(direction.x) : 0f;
-        float y = Mathf.Abs(direction.y) > 0.5f ? Mathf.Sign(direction.y) : 0f;
-
-        return new Vector2(x, y);
-    }
 
     private void IncWave()
     {
