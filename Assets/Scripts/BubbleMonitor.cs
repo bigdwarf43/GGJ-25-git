@@ -32,6 +32,8 @@ public class BubbleMonitor : MonoBehaviour
         bubbleBursted = true;
         Explosion.Play();
         transform.GetComponent<SpriteRenderer>().enabled = false;
+        transform.GetComponent<Collider2D>().enabled = false;
+
         float timeToWait = Explosion.totalTime;
         GameManager.Instance.shake_screen();
         StartCoroutine(burstBubbleWithExplosion(timeToWait));

@@ -13,13 +13,14 @@ public class WaveSpawner : MonoBehaviour
 
     private bool stopSpawning = false;
 
-    private void Awake()
+    void Start()
     {
+        i = 0;
         currentWave = waves[i]; // Spawning the first wave
-        timeBtwnSpawns = currentWave.TimeBeforeThisWave;
+        timeBtwnSpawns = Time.time + currentWave.TimeBeforeThisWave;
     }
 
-    private void Update()
+    void Update()
     {
         if (GameManager.Instance.isGameRunning)
         {

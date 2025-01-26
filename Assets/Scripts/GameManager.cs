@@ -92,6 +92,8 @@ public class GameManager : MonoBehaviour
     public void retry_clicked()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+
+
     }
 
     public void shake_screen()

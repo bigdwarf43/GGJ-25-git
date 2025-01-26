@@ -544,7 +544,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e4b39538a4d95844b94e98e854a5c90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  circleRadius: 5.5
+  circleRadius: 7
   circleRenderer: {fileID: 294526254}
 --- !u!120 &294526254
 LineRenderer:
@@ -791,7 +791,7 @@ Camera:
   far clip plane: 1000
   field of view: 104
   orthographic: 1
-  orthographic size: 7
+  orthographic size: 10
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -2439,6 +2439,7 @@ MonoBehaviour:
   mainCamera: {fileID: 519420028}
   GameOverPanel: {fileID: 686803532}
   TimeTextObject: {fileID: 1085770400}
+  isGameRunning: 1
   highScoreText: {fileID: 196216434}
   duration: 0.15
   magnitude: 0.4
