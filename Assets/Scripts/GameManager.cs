@@ -9,9 +9,14 @@ public class GameManager : MonoBehaviour
 
     public LineRenderer circleRenderer;
     public static GameManager Instance { get; private set; }
+
+
     public float bubblePushForce = 0.7f;
     public float maxBubbleVelocity = 3f;
     public GameObject target;
+
+    [Header("CAMERA")]
+    public GameObject mainCamera;
 
     [Header("UI RELATED")]
     // UI RELATED
@@ -19,13 +24,17 @@ public class GameManager : MonoBehaviour
     public GameObject TimeTextObject;
     private int elapsedSeconds = 0; // Tracks seconds passed
     private float timer = 0f; // Internal timer to track time
-    private bool isRunning = true;
+    public bool isGameRunning = true;
     public TextMeshProUGUI highScoreText;
+
+    [Header("SCREEN SHAKE")]
+    public float duration;
+    public float magnitude;
 
     private void Awake()
     {
         // If there is an instance, and it's not me, delete myself.
-        Time.timeScale = 1f;
+        isGameRunning = true;
 
         if (Instance != null && Instance != this)
         {
@@ -37,16 +46,11 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public void BubbleHit()
-    {
-        Debug.Log("Game over");
-        GameOver();
-    }
-
     public void GameOver()
     {
+        Debug.Log("Game over");
+        isGameRunning = false;
         GameOverPanel.SetActive(true);
-        Time.timeScale = 0f;
         int highscore = PlayerPrefs.GetInt("highscore");
 
         if (elapsedSeconds > highscore)
@@ -62,7 +66,7 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (isRunning)
+        if (isGameRunning)
         {
            
             UpdateTimerUI();
@@ -82,15 +86,19 @@ public class GameManager : MonoBehaviour
 
     void UpdateTimerUI()
     {
-
-
         TimeTextObject.GetComponent<TextMeshProUGUI>().text = "Time: " + $"{elapsedSeconds}";
-
     }
 
     public void retry_clicked()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
+    public void shake_screen()
+    {
+     
+        var camera_shake = mainCamera.GetComponent<CameraShake>();
+        camera_shake.StartCoroutine(camera_shake.Shake(duration, magnitude));
     }
 
 }

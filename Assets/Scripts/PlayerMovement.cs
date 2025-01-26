@@ -14,10 +14,7 @@ public class PlayerMovement : MonoBehaviour
 
     private float dir = 1;
 
-    //Temp logic 
-   /* public float raycastDuration = 0.1f; // Time in seconds for which the raycast is active
-    public float intervalDuration = 0.5f; // Time in seconds for which the raycast is inactive*/
- /*   bool isRaycasting = true;*/
+
     private Vector2 boxSize = new Vector2(2f, 2f);
     public float circleRadius = 0.5f; // Width of the CircleCast
 
@@ -25,14 +22,14 @@ public class PlayerMovement : MonoBehaviour
     private float bubblePushForce;
     private float maxBubbleVelocity;
 
-    // Wind Object
-    /*    public GameObject windObject;*/
-
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        /*StartCoroutine(RaycastCycle());*/
-        
+        // Set initial position
+        float x = target.position.x + Mathf.Cos(angle) * radius;
+        float y = target.position.y + Mathf.Sin(angle) * radius;
+
+        transform.position = new Vector2(x, y); 
     }
 
     void changeDir()
@@ -44,55 +41,41 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
 
-        /*  windObject.transform.right = target.position - windObject.transform.position;  */
-        /* transform.right = (target.position - transform.position).normalized ;*/
-
-        // Rotate the sprite based on the angle
-        transform.rotation = Quaternion.Euler(0, 0, (angle * Mathf.Rad2Deg) + 270 );  // Convert angle to 
-
-        radius = target.GetComponent<CircleCenterTarget>().circleRadius;
-
-
-
-        float x = target.position.x + Mathf.Cos(angle) * radius;
-        float y = target.position.y + Mathf.Sin(angle) * radius;
-
-        transform.position = new Vector2(x, y);
-
-
-        if (dir == 1)
+        if (GameManager.Instance.isGameRunning)
         {
-            angle += speed * Time.deltaTime;
-        }
-        else
-        {
-            angle -= speed * Time.deltaTime;
+            // Rotate the sprite based on the angle
+            transform.rotation = Quaternion.Euler(0, 0, (angle * Mathf.Rad2Deg) + 270);  // Convert angle to 
+
+            radius = target.GetComponent<CircleCenterTarget>().circleRadius;
+
+
+
+            float x = target.position.x + Mathf.Cos(angle) * radius;
+            float y = target.position.y + Mathf.Sin(angle) * radius;
+
+            transform.position = new Vector2(x, y);
+
+
+            if (dir == 1)
+            {
+                angle += speed * Time.deltaTime;
+            }
+            else
+            {
+                angle -= speed * Time.deltaTime;
+            }
+
+            if (Input.GetKeyDown(inputKey))
+            {
+                changeDir();
+            }
+
+            checkBubble();
         }
 
-        if (Input.GetKeyDown(inputKey))
-        {
-            changeDir();
-        }
-
-        /*checkBubble();*/
-     /*   if (isRaycasting)*/
-        checkBubble();
 
 
     }
-   /* private IEnumerator RaycastCycle()
-    {
-        while (true)
-        {
-            // Enable raycasting
-            isRaycasting = true;
-            yield return new WaitForSeconds(raycastDuration);
-
-            // Disable raycasting
-            isRaycasting = false;
-            yield return new WaitForSeconds(intervalDuration);
-        }
-    }*/
     void checkBubble()
     {
         bubblePushForce = GameManager.Instance.bubblePushForce;

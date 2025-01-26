@@ -45,7 +45,9 @@ public class Bullet : MonoBehaviour
         if (collision.transform.CompareTag("Bubble"))
         {
             Destroy(gameObject);
-            GameManager.Instance.BubbleHit();
+
+            collision.transform.GetComponent<BubbleMonitor>().BurstBubble();
+         
             
         }
     }

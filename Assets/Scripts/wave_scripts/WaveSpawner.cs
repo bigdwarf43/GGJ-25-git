@@ -21,18 +21,22 @@ public class WaveSpawner : MonoBehaviour
 
     private void Update()
     {
-        if (stopSpawning)
+        if (GameManager.Instance.isGameRunning)
         {
-            return;
-        }
+            if (stopSpawning)
+            {
+                return;
+            }
 
-        if (Time.time >= timeBtwnSpawns)
-        {
-            SpawnWave();
-            IncWave();
+            if (Time.time >= timeBtwnSpawns)
+            {
+                SpawnWave();
+                IncWave();
 
-            timeBtwnSpawns = Time.time + currentWave.TimeBeforeThisWave;
+                timeBtwnSpawns = Time.time + currentWave.TimeBeforeThisWave;
+            }
         }
+        
     }
 
     private void SpawnWave()
